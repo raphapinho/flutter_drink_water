@@ -1,0 +1,2 @@
+C:/Users/Pinho/drink_water/android/app/.cxx/Debug/6j433i1q/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/Pinho/drink_water/android/app/.cxx/Debug/6j433i1q/x86_64/CMakeFiles/rebuild_cache.dir
