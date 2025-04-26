@@ -20,30 +20,31 @@ class _BottomNavBarState extends State<BottomNavBar> {
     setState(() {
       _indiceAtual = index;
     });
-    // Navega para a tela correspondente usando o Navigator
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (context) => _telas[_indiceAtual]),
-    );
+    // Você pode adicionar lógica de navegação adicional aqui, se necessário.
+    // O Scaffold com o BottomNavigationBar já gerencia a troca de telas no body.
     print('Tela $_indiceAtual selecionada');
   }
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      backgroundColor: Colors.transparent,
-      elevation: 0.0,
-      currentIndex: _indiceAtual,
-      onTap: _onTapTapped,
-      items: const [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: 'Home',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.water_drop),
-          label: 'Histórico',
-        ),
-      ],
+    return Scaffold(
+      body: _telas[_indiceAtual],
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+        currentIndex: _indiceAtual,
+        onTap: _onTapTapped,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.water_drop),
+            label: 'Histórico',
+          ),
+        ],
+      ),
     );
   }
 }
