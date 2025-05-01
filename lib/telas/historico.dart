@@ -1,4 +1,3 @@
-import 'package:drink_water/telas/navBar.dart';
 import 'package:flutter/material.dart';
 
 class Historico extends StatefulWidget {
