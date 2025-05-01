@@ -69,8 +69,8 @@ class _HomePageState extends State<HomePage>
         title: Text(
           'DrinkWater',
           style: TextStyle(
-            color: Colors.black,
-            fontSize: 18,
+            color: const Color.fromARGB(255, 255, 255, 255),
+            fontSize: 25,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage>
         centerTitle: true,
       ),
       backgroundColor: const Color.fromRGBO(43, 44, 86, 1),
-      bottomNavigationBar: BottomNavBar(),
+      // bottomNavigationBar: BottomNavBar(),
       body: AnimatedBuilder(
         animation: _waveAnimation,
         builder: (context, child) {
@@ -136,8 +136,9 @@ class _HomePageState extends State<HomePage>
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  Text(
-                    'Faltam: ${(totalWater - aguaTotal).toInt()} ml',
+                  Text(  (totalWater - aguaTotal) > 0 ?
+                    'Faltam: ${(totalWater - aguaTotal).toInt()} ml':
+                    'Parabéns, você alcançou a meta diária!',
                     style: TextStyle(
                       color: (totalWater - aguaTotal) > 0
                           ? Colors.orangeAccent

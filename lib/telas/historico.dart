@@ -30,10 +30,10 @@ class _HistoricoState extends State<Historico> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavBar(),
+      // bottomNavigationBar: BottomNavBar(),
       appBar: AppBar(
         title: const Text('Histórico de Consumo',style: TextStyle(
-          color: Colors.black,
+          color: Color.fromARGB(255, 253, 253, 253),
           fontSize: 25,
           fontWeight: FontWeight.w600
         ),),
@@ -85,12 +85,14 @@ class _HistoricoState extends State<Historico> {
                             Text(
                               '${registro.data.day}/${registro.data.month}/${registro.data.year}',
                               style: const TextStyle(
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 18,
                                   color: Colors.black87),
                             ),
                             Text(
                               '${registro.quantidade} / ${registro.metaDiaria} ml',
-                              style: const TextStyle(color: Colors.black87),
+                              style: const TextStyle(color: Colors.black87,fontSize: 16),
+                              
                             ),
                           ],
                         ),
